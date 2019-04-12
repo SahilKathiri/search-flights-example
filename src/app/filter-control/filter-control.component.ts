@@ -15,6 +15,10 @@ export class FilterControlComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * CHanges filter value on click of the buttons
+   * @param type Type of filter
+   */
   changeType(type: string) {
     this.filter.type = type;
     this.filter.departureDate = null;

@@ -1,3 +1,6 @@
+/**
+ * Contains flight details from JSON source
+ */
 export interface IFlight {
     airline: string;
     airlineCode: string;
@@ -12,6 +15,9 @@ export interface IFlight {
     operationalDays: number[];
 }
 
+/**
+ * Contains filter data
+ */
 export interface IFilter {
     type: string;
     origin: string;

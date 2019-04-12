@@ -25,6 +25,11 @@
 
 $breakpoint-mobile: 768px;
 @media (max-width: $breakpoint-mobile) {
+    :host {
+        display: block;
+        width: -webkit-fill-available;
+    }
+
     .infomation {
         flex-direction: column;
         width: inherit;
@@ -34,4 +39,9 @@ $breakpoint-mobile: 768px;
             margin-bottom: 0.5em;
         }
     }
+}
+
+.noFlights {
+    font-size: 20px;
+    font-weight: bold;
 }
