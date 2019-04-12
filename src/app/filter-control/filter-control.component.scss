@@ -1,0 +1,41 @@
+.type {
+    display: flex;
+    margin: 2em;
+
+    div {
+        width: 50%;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #906754;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 1em;
+        margin-right: 0.5em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active, &:hover {
+            background-color: #282524;
+            border-color: #282524;
+        }
+    }
+}
+
+.filter {
+    margin: 1em 2em;
+    
+    input {
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: 17px;
+        line-height: 25px;
+        padding-left: 0.5em;
+        border-radius: 5px;
+    }
+}
+
+.hidden {
+    display: none;
+}

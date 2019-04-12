@@ -1,0 +1,18 @@
+<div class="type">
+  <div (click)="changeType('oneWay')" [ngClass]="filter.type == 'oneWay'? 'active' : ''">One-way</div>
+  <div (click)="changeType('return')" [ngClass]="filter.type == 'return'? 'active' : ''">Return</div>
+</div>
+
+<div class="filter">
+  <input [(ngModel)]="filter.origin" placeholder="Enter Origin"/>
+  <input [(ngModel)]="filter.destination" placeholder="Enter destination"/>
+  <input [(ngModel)]="filter.departureDate" placeholder="Enter Departure Date" 
+    [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1">
+  <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+  <input [ngClass]="filter.type == 'oneWay'? 'hidden': ''" [(ngModel)]="filter.arrivalDate" 
+    placeholder="Enter Arrival Date" [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" />
+  <owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
+
+  <input [(ngModel)]="filter.pax" placeholder="Enter number of passengers"/>
+</div>
+  

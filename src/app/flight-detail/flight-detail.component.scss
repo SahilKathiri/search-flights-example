@@ -1,0 +1,64 @@
+.card {
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    width: max-content;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+
+    .price {
+        font-size: 20px;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .flightsInfo {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 600px;
+
+        .flight {
+            display: block;
+            order: -1;
+            font-size: 14px;
+            line-height: 21px;
+            
+            .cities {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        .bookFlight {
+            order: -1;
+
+            button {
+                background-color: #ff3d00;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 0.5em 1em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
+
+$breakpoint-mobile: 768px;
+@media (max-width: $breakpoint-mobile) {
+    .card {
+        width: inherit;
+        
+        .flightsInfo {
+            flex-direction: column;
+            width: inherit;
+        }
+
+        .flight {
+            margin-bottom: 1em;
+        }
+    }
+}

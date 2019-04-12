@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="price">Rs. {{ flight.price }}</div>
+  <div class="flightsInfo">
+    <div class="flight">
+      <span>{{ flight.airlineCode }}-{{ flight.flightNumber }}</span>
+      <br>
+      <span class="cities">{{ flight.origin }} > {{ flight.destination }}</span>
+      <br>
+      <span>Depart: {{ flight.departure | date:'hh:mm aaa' }}</span>
+      <br>
+      <span>Arrive: {{ flight.arrival | date:'hh:mm aaa' }}</span>
+    </div>
+    <div class="bookFlight">
+      <button>Book this Flight</button>
+    </div> 
+  </div>
+</div>

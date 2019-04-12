@@ -1,0 +1,37 @@
+:host {
+    display: flex;
+}
+
+.infomation {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    width: 632px;
+    border-bottom: 2px solid #d1d1d1;
+
+
+    .cityInfo {
+        font-size: 25px;
+    }
+
+    .dateInfo {
+        line-height: 25px;
+    }
+}
+
+$breakpoint-mobile: 768px;
+@media (max-width: $breakpoint-mobile) {
+    .infomation {
+        flex-direction: column;
+        width: inherit;
+        align-items: normal;
+
+        .cityInfo {
+            margin-bottom: 0.5em;
+        }
+    }
+}

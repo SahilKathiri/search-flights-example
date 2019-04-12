@@ -1,0 +1,34 @@
+<div class="departureFlight" *ngIf="filter.type != null && showFlightInfo">
+  <div class="infomation">
+    <div class="cityInfo">
+      {{ filter.origin }} > {{ filter.destination }}
+    </div>
+    <div class="dateInfo">
+      <span>Depart: {{ filter.departureDate | date }}</span>
+      <br>
+    </div>
+  </div>
+  
+  <div class="flightList">
+    <app-flight-detail *ngFor = "let flight of filteredDepartureFlights" [flight]="flight"></app-flight-detail>
+  </div>
+</div>
+
+<div class="arrivalFlight"  *ngIf="filter.type == 'return' && showFlightInfo">
+    <div class="infomation">
+      <div class="cityInfo">
+        {{ filter.destination }} > {{ filter.origin }}
+      </div>
+      <div class="dateInfo">
+        <span>Return: {{ filter.arrivalDate | date }}</span>
+      </div>
+    </div>
+    
+    <div class="flightList">
+      <app-flight-detail *ngFor = "let flight of filteredArrivalFlights" [flight]="flight"></app-flight-detail>
+    </div>
+  </div>
+
+<div class="noFlights" *ngIf="!showFlightInfo">
+  No Flights available for your criteria
+</div>
